@@ -29,7 +29,7 @@ int main(void)
    {
       for (spaces = 1; spaces <= height - i; spaces++)
       {
-            printf(" ");
+            printf("  ");
       }
       for (j = 1; j <= i; j++)
       {
