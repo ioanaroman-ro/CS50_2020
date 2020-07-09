@@ -27,7 +27,7 @@ int main(void)
    int i, j, spaces = 0;
    for (i = 1; i <= height; i++)
    {
-      for (spaces = 1; spaces <= height - i; spaces++)
+      for (spaces = 1; spaces <= height - i - 1; spaces++)
       {
             printf("  ");
       }
