@@ -23,24 +23,24 @@ int main(void)
        }
    }
   //Print pyramid
-   while (height < 1 || height > 8);
-   int i, j, spaces = 0;
-   for (i = 1; i <= height; i++)
-   {
-      for (spaces = 1; spaces <= height - i - 1; spaces++)
-      {
-            printf("  ");
-      }
-      for (j = 1; j <= i; j++)
-      {
-         printf("#");
-      }
+    while (height < 1 || height > 8);
+    int i, j, spaces = 0;
+    for (i = 1; i <= height; i++)
+    {
+        for (spaces = 1; spaces <= height - i; spaces++)
+        {
+        printf(" ");
+        }
+        for (j = 1; j <= i; j++)
+        {
+        printf("#");
+        }
         printf(" ");
         printf(" ");
-      for (j = i; j >= 1; j--)
-      {
-         printf("#");
-      }
-      printf("\n");
+        for (j = i; j >=1 ; j--)
+        {
+        printf("#");
+        }
+        printf("\n");
    }
 }
