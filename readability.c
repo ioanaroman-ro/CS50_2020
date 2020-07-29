@@ -24,17 +24,17 @@ int main(void)
     //Returning the grade
     if (ind < 1)
     {
-        printf("Before grade 1 \n");
+        printf("Before Grade 1\n");
     }
     else
     {
         if (ind > 16)
         {
-            printf("Grade 16+ \n");
+            printf("Grade 16+\n");
         }
         else
         {
-            printf("Grade: %.0f \n", ind);
+            printf("Grade %.0f\n", ind);
         }
     }
 }
