@@ -28,29 +28,32 @@ int main(int argc, string argv[])
     {
         printf("Usage: ./caesar key\n");
     }
-    //transforming argument from string to int
-    int k = atoi(argv[1]);
-    //getting user text
-    string user_text = get_string("plaintext:  ");
-    printf("ciphertext: ");
-    //printing ciphertext
-    for (int j = 0; j < strlen(user_text); j++)
+    else
     {
-        if (islower(user_text[j]))
+        //transforming argument from string to int
+        int k = atoi(argv[1]);
+        //getting user text
+        string user_text = get_string("plaintext:  ");
+        printf("ciphertext: ");
+        //printing ciphertext
+        for (int j = 0; j < strlen(user_text); j++)
         {
-            printf("%c", ((user_text[j] - 'a' + k) % 26 + 'a'));
-        }
-        else
-        {
-            if (isupper(user_text[j]))
+            if (islower(user_text[j]))
             {
-                printf("%c", ((user_text[j] - 'A' + k) % 26 + 'A'));
+                printf("%c", ((user_text[j] - 'a' + k) % 26 + 'a'));
             }
             else
             {
-                printf("%c", user_text[j]);
+                if (isupper(user_text[j]))
+                {
+                    printf("%c", ((user_text[j] - 'A' + k) % 26 + 'A'));
+                }
+                else
+                {
+                    printf("%c", user_text[j]);
+                }
             }
         }
+        printf("/n");
     }
-    printf("/n");
 }
