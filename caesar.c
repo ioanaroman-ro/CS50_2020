@@ -6,11 +6,11 @@
 
 int main(int argc, string argv[])
 {
-    bool correct = 1;
+    bool incorrect = 0;
     // checking for more than one argument
     if (argc != 2)
     {
-        correct = 0;
+        incorrect = 1;
     }
     //checking for alphanumeric characters
     else
@@ -19,12 +19,12 @@ int main(int argc, string argv[])
         {
             if (isalpha(argv[1][i]))
             {
-                correct = 0;
+                incorrect = 1;
             }
         }
     }
     //printing key error message
-    if (correct == 0)
+    if (incorrect == 1)
     {
         printf("Usage: ./caesar key\n");
     }
