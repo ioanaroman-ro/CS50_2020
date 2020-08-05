@@ -38,7 +38,7 @@ int main(int argc, string argv[])
         string user_text = get_string("plaintext:  ");
         printf("ciphertext: ");
         //printing ciphertext
-        for (int j = 0; j <= strlen(user_text); j++)
+        for (int j = 0; j < strlen(user_text); j++)
         {
             //verifying lowercase
             if (islower(user_text[j]))
