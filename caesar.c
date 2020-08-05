@@ -32,7 +32,7 @@ int main(int argc, string argv[])
     int k = atoi(argv[1]);
     //getting user text
     string user_text = get_string("plaintext:  ");
-    printf("ciphertext: ");
+    printf("ciphertext:");
     //printing ciphertext
     for (int j = 0; j <= strlen(user_text); j++)
     {
