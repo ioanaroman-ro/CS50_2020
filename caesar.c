@@ -40,23 +40,26 @@ int main(int argc, string argv[])
         //printing ciphertext
         for (int j = 0; j <= strlen(user_text); j++)
         {
+            //verifying lowercase
             if (islower(user_text[j]))
             {
-                printf("%c", ((user_text[j] - 'a' + k) % 26 + 'a'));
+                printf("%c", (((user_text[j] - 'a' + k) % 26) + 'a'));
             }
+            //verifying uppercase
             else
             {
                 if (isupper(user_text[j]))
                 {
-                    printf("%c", ((user_text[j] - 'A' + k) % 26 + 'A'));
+                    printf("%c", (((user_text[j] - 'A' + k) % 26) + 'A'));
                 }
+                //printing everything else
                 else
                 {
                     printf("%c", user_text[j]);
                 }
             }
         }
-        printf("/n");
+        printf("\n");
         return 0;
     }
 }
