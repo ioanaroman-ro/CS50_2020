@@ -11,6 +11,7 @@ int main(int argc, string argv[])
     if (argc != 2)
     {
         incorrect = 1;
+        return 1;
     }
     //checking for alphanumeric characters
     else
@@ -20,6 +21,7 @@ int main(int argc, string argv[])
             if (isalpha(argv[1][i]))
             {
                 incorrect = 1;
+                return 1;
             }
         }
     }
@@ -55,5 +57,6 @@ int main(int argc, string argv[])
             }
         }
         printf("/n");
+        return 0;
     }
 }
