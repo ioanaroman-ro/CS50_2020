@@ -83,15 +83,6 @@ int main(int argc, string argv[])
         printf("\n");
     }
 
-    for (int i = 0; i < voter_count; i++)
-    {
-        for (int j = 0; j < candidate_count; j++)
-        {
-            printf("%i", preferences[i][j]);
-        }
-        printf("\n");
-    }
-
     // Keep holding runoffs until winner exists
     while (true)
     {
@@ -184,7 +175,14 @@ bool print_winner(void)
 // Return the minimum number of votes any remaining candidate has
 int find_min(void)
 {
-
+    int min = 0;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].votes > min)
+        {
+            min = candidates[i].votes;
+        }
+    }
     return 0;
 }
 
