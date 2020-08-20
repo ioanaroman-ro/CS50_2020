@@ -199,11 +199,7 @@ bool is_tie(int min)
     }
     if (k > 1)
     {
-        if (k < candidate_count)
-        {
-            return false;
-        }
-        return true;
+       return true;
     }
     return false;
 }
