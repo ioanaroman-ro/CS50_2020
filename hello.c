@@ -3,8 +3,8 @@
 
 int main(void)
 {
-   // user has to input his/her's name
+// user has to input his/her's name
     string name = get_string("What's your name?\n");
-   //program greets user
+//program greets user
     printf("hello, %s! \n", name);
 }
