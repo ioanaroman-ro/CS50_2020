@@ -196,6 +196,10 @@ bool is_tie(int min)
         {
             k++;
         }
+        else
+        {
+            return false;
+        }
     }
     if (k > 1)
     {
