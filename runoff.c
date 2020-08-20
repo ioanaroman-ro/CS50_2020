@@ -137,7 +137,7 @@ bool vote(int voter, int rank, string name)
         }
 
     }
-   return false;
+    return false;
 }
 
 // Tabulate votes for non-eliminated candidates
@@ -160,10 +160,10 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    float w = voter_count/2;
+    float w = voter_count / 2;
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].votes > w )
+        if (candidates[i].votes > w)
         {
             printf("%s\n", candidates[i].name);
             return true;
@@ -206,7 +206,7 @@ bool is_tie(int min)
     }
     if (k > 1)
     {
-       return true;
+        return true;
     }
     return false;
 }
