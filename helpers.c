@@ -23,9 +23,9 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
     int nr = 0;
     int ng = 0;
     int nb = 0;
-    for (int i = 0; i < (height - 1); i++)
+    for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < (width - 1); j++)
+        for (int j = 0; j < width; j++)
         {
             nr = round((float)image[i][j].rgbtRed * 0.393 + (float)image[i][j].rgbtGreen * 0.769 + (float)image[i][j].rgbtBlue * 0.189);
             ng = round((float)image[i][j].rgbtRed * 0.349 + (float)image[i][j].rgbtGreen * 0.686 + (float)image[i][j].rgbtBlue * 0.168);
