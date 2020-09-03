@@ -4,12 +4,12 @@
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
-    int a = 0;
+    float a = 0;
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
-            a = ceil((image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue)/3);
+            a = round((image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue)/3);
             image[i][j].rgbtRed = a;
             image[i][j].rgbtGreen = a;
             image[i][j].rgbtBlue = a;
@@ -31,29 +31,29 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             nr = round(image[i][j].rgbtRed * 0.393 + image[i][j].rgbtGreen * 0.769 + image[i][j].rgbtBlue * 0.189);
             ng = round(image[i][j].rgbtRed * 0.349 + image[i][j].rgbtGreen * 0.686 + image[i][j].rgbtBlue * 0.168);
             nb = round(image[i][j].rgbtRed * 0.272 + image[i][j].rgbtGreen * 0.534 + image[i][j].rgbtBlue * 0.131);
-            if (nr > 255)
-            {
-                image[i][j].rgbtRed = 255;
-            }
-            else
+            if (nr < 255)
             {
                 image[i][j].rgbtRed = nr;
             }
-            if (ng > 255)
-            {
-                image[i][j].rgbtGreen = 255;
-            }
             else
+            {
+                image[i][j].rgbtRed = 255;
+            }
+            if (ng < 255)
             {
                 image[i][j].rgbtGreen = ng;
             }
-            if (nb > 255)
+            else
             {
-                image[i][j].rgbtBlue = 255;
+                image[i][j].rgbtGreen = 255;
+            }
+            if (nb < 255)
+            {
+                image[i][j].rgbtBlue = nb;
             }
             else
             {
-                image[i][j].rgbtBlue = nb;
+                image[i][j].rgbtBlue = 255;
             }
         }
     }
