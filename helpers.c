@@ -79,6 +79,8 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE original[height][width];
+    int w = width - 1;
+    int h = height - 1;
     for (int i = 0; i < height; i++)
     {
         for ( int j = 0; j < width; j++)
@@ -89,9 +91,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     image[0][0].rgbtRed = round(((float)original[0][0].rgbtRed+(float)original[0][1].rgbtRed+(float)original[1][0].rgbtRed+(float)original[1][1].rgbtRed)/4);
     image[0][0].rgbtGreen = round(((float)original[0][0].rgbtGreen+(float)original[0][1].rgbtGreen+(float)original[1][0].rgbtGreen+(float)original[1][1].rgbtGreen)/4);
     image[0][0].rgbtBlue = round(((float)original[0][0].rgbtBlue+(float)original[0][1].rgbtBlue+(float)original[1][0].rgbtBlue+(float)original[1][1].rgbtBlue)/4);
-    image[0][width-1].rgbtRed = round(((float)original[0][width-1].rgbtRed+(float)original[0][width-2].rgbtRed+(float)original[1][width-2].rgbtRed+(float)original[1][width-1].rgbtRed)/4);
-    image[0][width-1].rgbtGreen = round(((float)original[0][width-1].rgbtGreen+(float)original[0][width-2].rgbtGreen+(float)original[1][width-2].rgbtGreen+(float)original[1][width-1].rgbtGreen)/4);
-    image[0][width-1].rgbtBlue = round(((float)original[0][width-1].rgbtBlue+(float)original[0][width-2].rgbtBlue+(float)original[1][width-2].rgbtBlue+(float)original[1][width-1].rgbtBlue)/4);
+    image[0][w].rgbtRed = round(((float)original[0][w-1].rgbtRed+(float)original[0][w].rgbtRed+(float)original[1][w-1].rgbtRed+(float)original[1][w].rgbtRed)/4);
+    image[0][w].rgbtGreen = round(((float)original[0][width-1].rgbtGreen+(float)original[0][width-2].rgbtGreen+(float)original[1][width-2].rgbtGreen+(float)original[1][width-1].rgbtGreen)/4);
+    image[0][w].rgbtBlue = round(((float)original[0][width-1].rgbtBlue+(float)original[0][width-2].rgbtBlue+(float)original[1][width-2].rgbtBlue+(float)original[1][width-1].rgbtBlue)/4);
     image[height-1][0].rgbtRed = round(((float)original[height-1][0].rgbtRed+(float)original[height-1][1].rgbtRed+(float)original[height-2][0].rgbtRed+(float)original[height-2][1].rgbtRed)/4);
     image[height-1][0].rgbtGreen = round(((float)original[height-1][0].rgbtGreen+(float)original[height-1][1].rgbtGreen+(float)original[height-2][0].rgbtGreen+(float)original[height-2][1].rgbtGreen)/4);
     image[height-1][0].rgbtBlue = round(((float)original[height-1][0].rgbtBlue+(float)original[height-1][1].rgbtBlue+(float)original[height-2][0].rgbtBlue+(float)original[height-2][1].rgbtBlue)/4);
