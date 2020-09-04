@@ -94,9 +94,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     image[0][w].rgbtRed = round(((float)original[0][w-1].rgbtRed+(float)original[0][w].rgbtRed+(float)original[1][w-1].rgbtRed+(float)original[1][w].rgbtRed)/4);
     image[0][w].rgbtGreen = round(((float)original[0][w-1].rgbtGreen+(float)original[0][w].rgbtGreen+(float)original[1][w-1].rgbtGreen+(float)original[1][w].rgbtGreen)/4);
     image[0][w].rgbtBlue = round(((float)original[0][w-1].rgbtBlue+(float)original[0][w].rgbtBlue+(float)original[1][w-1].rgbtBlue+(float)original[1][w].rgbtBlue)/4);
-    image[h][0].rgbtRed = round(((float)original[h-1][0].rgbtRed+(float)original[h][1].rgbtRed+(float)original[h-1][0].rgbtRed+(float)original[h-1][1].rgbtRed)/4);
-    image[h][0].rgbtGreen = round(((float)original[h-1][0].rgbtGreen+(float)original[h][1].rgbtGreen+(float)original[h-1][0].rgbtGreen+(float)original[h-1][1].rgbtGreen)/4);
-    image[h][0].rgbtBlue = round(((float)original[h-1][0].rgbtBlue+(float)original[h][1].rgbtBlue+(float)original[h-1][0].rgbtBlue+(float)original[h-1][1].rgbtBlue)/4);
+    image[h][0].rgbtRed = round(((float)original[h-1][0].rgbtRed+(float)original[h-1][1].rgbtRed+(float)original[h][0].rgbtRed+(float)original[h][1].rgbtRed)/4);
+    image[h][0].rgbtGreen = round(((float)original[h-1][0].rgbtGreen+(float)original[h-1][1].rgbtGreen+(float)original[h][0].rgbtGreen+(float)original[h][1].rgbtGreen)/4);
+    image[h][0].rgbtBlue = round(((float)original[h-1][0].rgbtBlue+(float)original[h-1][1].rgbtBlue+(float)original[h][0].rgbtBlue+(float)original[h][1].rgbtBlue)/4);
     image[h][w].rgbtRed = round(((float)original[h][w].rgbtRed+(float)original[h-1][w-1].rgbtRed+(float)original[h-1][w].rgbtRed+(float)original[h][w-1].rgbtRed)/4);
     image[h][w].rgbtGreen = round(((float)original[h][w].rgbtGreen+(float)original[h-1][w-1].rgbtGreen+(float)original[h-1][w].rgbtGreen+(float)original[h][w-1].rgbtGreen)/4);
     image[h][w].rgbtBlue = round(((float)original[h][w].rgbtBlue+(float)original[h-1][w-1].rgbtBlue+(float)original[h-1][w].rgbtBlue+(float)original[h][w-1].rgbtBlue)/4);
