@@ -120,9 +120,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     }
     for (int j = 1; j < width - 1; j++)
     {
-        image[height][j].rgbtRed = round(((float)original[height][j-1].rgbtRed + (float)original[height][j].rgbtRed + (float)original[height][j+1].rgbtRed + (float)original[height-1][j-1].rgbtRed + (float)original[height-1][j].rgbtRed + (float)original[height-1][j+1].rgbtRed)/6);
-        image[height][j].rgbtGreen = round(((float)original[height][j-1].rgbtGreen + (float)original[height][j].rgbtGreen + (float)original[height][j+1].rgbtGreen + (float)original[height-1][j-1].rgbtGreen + (float)original[height-1][j].rgbtGreen + (float)original[height-1][j+1].rgbtGreen)/6);
-        image[height][j].rgbtBlue = round(((float)original[height][j-1].rgbtBlue + (float)original[height][j].rgbtBlue + (float)original[height][j+1].rgbtBlue + (float)original[height-1][j-1].rgbtBlue + (float)original[height-1][j].rgbtBlue + (float)original[height-1][j+1].rgbtBlue)/6);
+        image[h][j].rgbtRed = round(((float)original[h][j-1].rgbtRed + (float)original[h][j].rgbtRed + (float)original[h][j+1].rgbtRed + (float)original[h-1][j-1].rgbtRed + (float)original[h-1][j].rgbtRed + (float)original[h-1][j+1].rgbtRed)/6);
+        image[h][j].rgbtGreen = round(((float)original[h][j-1].rgbtGreen + (float)original[h][j].rgbtGreen + (float)original[h][j+1].rgbtGreen + (float)original[h-1][j-1].rgbtGreen + (float)original[h-1][j].rgbtGreen + (float)original[h-1][j+1].rgbtGreen)/6);
+        image[h][j].rgbtBlue = round(((float)original[h][j-1].rgbtBlue + (float)original[h][j].rgbtBlue + (float)original[h][j+1].rgbtBlue + (float)original[h-1][j-1].rgbtBlue + (float)original[h-1][j].rgbtBlue + (float)original[h-1][j+1].rgbtBlue)/6);
     }
     for (int i = 1; i < height - 1; i++)
     {
