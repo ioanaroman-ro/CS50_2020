@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     //Define name of file to be written
     char f_name[8] = {0};
     //Repeat reading from file
-    while (fread(buffer, 512, 1, init_f) == 1)
+    while (fread(buffer, sizeof(buffer), 1, init_f) == 1)
     {
         //Checking for beggining of JPEG
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
                 //Open new file for writing
                 new_f = fopen(f_name, "w");
                 //Writing new file
-                fwrite(buffer, sizeof(BYTE), 1, new_f);
+                fwrite(buffer, sizeof(buffer), 1, new_f);
 
             }
             else
@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
                     //Open new file for writing
                     new_f = fopen(f_name, "w");
                     //Writing new file
-                    fwrite(buffer, sizeof(BYTE), 1, new_f);
+                    fwrite(buffer, sizeof(buffer), 1, new_f);
                 }
             }
         }
