@@ -65,10 +65,11 @@ int main(int argc, char *argv[])
                 }
             }
         }
-        else{
+        else
+        {
             if (f_nr > 0)
             {
-               //Continue to write new file
+                //Continue to write new file
                 fwrite(buffer, sizeof(buffer), 1, new_f);
             }
         }
