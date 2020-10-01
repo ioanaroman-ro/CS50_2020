@@ -51,8 +51,8 @@ unsigned int hash(const char *word)
     // TODO
     //credits to https://medium.com/@dentured/cs50-2020-pset-5-speller-c9d05afc490
     unsigned long hash = 5381;
-    int c;
-    while ((c = toupper(*word++)))
+    int c = 0;
+    while (c == *word++)
     {
         hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
     }
