@@ -37,7 +37,7 @@ bool check(const char *word)
     }
     for (node *cursor = head; cursor != NULL; cursor = cursor->next)
     {
-        if (strcasecmp(cursor->word,word) == 0)
+        if (strcasecmp(cursor->word, word) == 0)
         {
             return true;
         }
