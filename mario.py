@@ -1,8 +1,10 @@
 from cs50 import get_int
 
 height = get_int("Height: \n")
-while height <= 0 or height > 8:
+
+while height < 1 or height > 8:
     height = get_int("Height: \n")
+
 i = 0
 
 while i < height:
