@@ -40,11 +40,6 @@ def main():
         copy = lines
         index = index1 = copy[0].find(key)
 
-        # Return count to 0 if found a longer repetition
-        while count > 0:
-            count -= 1
-            continue
-
         # Search for dna string based on index
         while copy[0][index:index+len(key)] == key:
             if index == index1:
