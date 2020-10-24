@@ -40,19 +40,15 @@ def main():
         copy = lines
         index = index1 = copy[0].find(key)
 
-        # Return count to 0 if found a longer repetition
-        while count > 0:
-            count -= 1
-            continue
-
         # Search for dna string based on index
         while copy[0][index:index+len(key)] == key:
             if index == index1:
                 count += 1
-                copy[0] = copy[0][:index1] + copy[0][(index1+len(key)):]
+                copy[0] = copy[0][:index] + copy[0][(index+len(key)):]
                 index = copy[0].find(key)
                 if count > countMax:
                     countMax = count
+                print(index, " ", index1)
             else:
                 # Move the index to the next group
                 index1 = index
@@ -60,6 +56,7 @@ def main():
 
         # Create list to store maximum values
         maximum.append(countMax)
+        print(maximum)
 
     for person in people:
         match = 0
