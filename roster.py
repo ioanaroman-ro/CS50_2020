@@ -25,7 +25,7 @@ def main():
     query = []
     query = db.execute("SELECT first,middle,last,birth FROM students WHERE lower(house) = ? ORDER BY last, first", house)
 
-    #Printing answer to user
+    # Printing answer to user
     for row in query:
         if row["middle"] == None:
             print("{} {}, born {}".format(row["first"], row["last"], row["birth"]))
