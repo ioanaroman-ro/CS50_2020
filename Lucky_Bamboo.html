@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Lucky Bamboo</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>
+              Lucky bamboo
+            </h1>
+            <h2>
+              Dracaena sanderiana
+            </h2>
+        <div class="shadowbox">
+            <p class="description">
+                The<strong> Lucky Bamboo</strong> is a small bamboo plant, which is believed to bring good
+                luck and fortune in ancient China. This is why this plant is placed in
+                pots in certain parts of the house so that the family or house owner to
+                enjoy the prosperity it brings, according to Feng Shui practices.
+            </p>
+        </div>
+        <br/>
+        <p class="benefits">
+            Benefits of <em>Lucky Bamboo</em> plant:
+        </p>
+        <div style="display:table">
+            <div class="design" style="display:table-cell; vertical-align:top; float:left;">
+                <ol>
+                    <li>
+                        It <span class="upside">deflects negative energy</span> where it is placed inside the home;
+                    </li>
+                    <li>
+                        It <span class="upside">brings wisdom and peace</span> into the home, and helps every person living inside the home enjoy them;
+                    </li>
+                    <li>
+                        The Lucky Bamboo allows the “spirit” of a person to fly free so that it can <span class="upside">heal the entire being</span> of that person,
+                        instead of being trapped in the mundane world.
+                   </li>
+                </ol>
+                <hr>
+                <a href="https://en.wikipedia.org/wiki/Dracaena_sanderiana" target="_blank">
+                    Learn more on Wikipedia
+                </a>
+            </div>
+            <div style="display:table-cell;">
+                <img
+                    src="https://www.flowersandfancies.com/files/cache/34f4fcddebf03e23e4e89b8952916dcb_f17453.jpg" alt="LuckyBamboo"/>
+            </div>
+        </div>
+    <br />
+    <button type="button" class="btn btn-success">
+        Buy now!
+    </button>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-end pagination-sm">
+            <li class="page-item">
+                <a class="page-link" href="index.html">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="index.html">Home</a></li>
+            <li class="page-item active">
+                <span class="page-link">
+                  1
+                <span class="sr-only">(current)</span>
+                </span>
+            <li class="page-item"><a class="page-link" href="Jade_Plant.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="Money_Plant.html">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="Jade_Plant.html">Next</a>
+            </li>
+        </ul>
+    </nav>
+    <p>
+        Coded by <strong>I</strong>oana
+    </p>
+    </div>
+    <script>
+        let buyButton = document.querySelector("button");
+        function buy(){
+            let currency = prompt("What currency do you use?(USD or EUR)");
+            currency = currency.toLowerCase().trim();
+            if (currency === "usd")
+                { alert ("You have to pay 100💲!")}
+            else {
+                if (currency === "eur") {
+                    alert ("You have to pay 100 € !")
+                }
+            else{
+                alert ("Use recommended currency!")
+                }
+            }
+        }
+    buyButton.addEventListener("click", buy);
+    </script>
+    </body>
+</html>

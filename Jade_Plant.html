@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Jade Plant</title>
+    </head>
+    <body>
+        <div class="container">
+    <h1>
+      Jade Plant
+    </h1>
+    <h2>
+      Crassula ovata
+    </h2>
+    <div class="shadowbox">
+            <p class="description">
+                Crassula ovata, commonly known as <strong>Jade Plant</strong> or <strong>Friendship Tree</strong>, is a succulent plant
+                with small pink or white flowers. It is native to South Africa, and is common as a houseplant worldwide.
+            </p>
+    </div>
+    <br/>
+    <p class="benefits">
+        Benefits of <em>Jade Plant</em> :
+    </p>
+    <div style="display:table">
+        <div class="design" style="display:table-cell; vertical-align:top; float:left;">
+          <ol>
+            <li>
+                It is a versatile <span class="upside">home remedy</span> used for treating <em>warts</em>, <em>nausea</em>, <em>corns</em>, and <em>diarrhea</em>.
+            </li>
+            <li>
+                 It <span class="upside">improves indoor air quality</span> and <span class="upside">increases humidity</span>.
+            </li>
+            <li>
+                It <span class="upside">absorbs CO2 in the night</span>, it’s one of the very few plants that you can grow indoors to raise the quality of the air in dark hours.
+            </li>
+            </ol>
+            <hr>
+            <a href="https://en.wikipedia.org/wiki/Dracaena_sanderiana" target="_blank">
+                Learn more on Wikipedia
+            </a>
+        </div>
+        <div style="display:table-cell;">
+            <img
+                src="https://www.gardenshop.co.za/wp-content/uploads/2019/03/Crassula-ovata-e1555315012994.jpg" alt="JadePlant" />
+        </div>
+    </div>
+    <br />
+    <button type="button" class="btn btn-success">
+        Buy now!
+    </button>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-end pagination-sm">
+            <li class="page-item">
+                <a class="page-link" href="Lucky_Bamboo.html">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="index.html">Home</a></li>
+            <li class="page-item"><a class="page-link" href="Lucky_Bamboo.html">1</a></li>
+            <li class="page-item active">
+                <span class="page-link">
+                  2
+                <span class="sr-only">(current)</span>
+                </span>
+            <li class="page-item"><a class="page-link" href="Money_Plant.html">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="Money_Plant.html">Next</a>
+            </li>
+        </ul>
+    </nav>
+    <p>
+        Coded by <strong>I</strong>oana
+    </p>
+    </div>
+    <script>
+        let buyButton = document.querySelector("button");
+        function buy(){
+            let currency = prompt("What currency do you use?(USD or EUR)");
+            currency = currency.toLowerCase().trim();
+            if (currency === "usd")
+                { alert ("You have to pay 100💲!")}
+            else {
+                if (currency === "eur") {
+                    alert ("You have to pay 100 € !")
+                }
+            else{
+                alert ("Use recommended currency!")
+                }
+            }
+        }
+    buyButton.addEventListener("click", buy);
+    </script>
+    </body>
+</html>

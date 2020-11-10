@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Money Plant</title>
+    </head>
+    <body>
+        <div class="container">
+    <h1>
+      Money Plant
+    </h1>
+    <h2>
+      Pilea peperomioides
+    </h2>
+    <div class="shadowbox">
+            <p class="description">
+                Pilea peperomioides, also known as <strong>Chinese money plant</strong>, pancake plant,
+                friendship plant, lefse plant, missionary plant or ufo plant, is a species of flowering plants in
+                the family Urticaceae, native to Yunnan Province in southern China.
+            </p>
+    </div>
+    <br/>
+    <p class="benefits">
+        Benefits of <em>Money Plant</em> plant:
+    </p>
+    <div style="display:table">
+        <div class="design" style="display:table-cell; vertical-align:top; float:left;">
+          <ol>
+            <li>
+                Pilea Peperomioides is <span class="upside">not toxic</span> to animals.
+            </li>
+            <li>
+                 It is one of the <span class="upside">easiest</span> of houseplants to grow, flourishing in a peat based compost.
+            </li>
+            <li>
+                <span class="upside">Symbolic:</span> Place a coin in the soil with your Chinese money plant, and it’ll spontaneously start to attract wealth.
+            </li>
+            </ol>
+            <hr>
+            <a href="https://en.wikipedia.org/wiki/Pilea_peperomioides" target="_blank">
+                Learn more on Wikipedia
+            </a>
+        </div>
+        <div style="display:table-cell;">
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRlVA78M7cXJq27IAc2HeKuq0yG9_LfyXEAs01G3vl1D0WhkEIKHabRTBzwTgctgSO5TAnluj93&usqp=CAc" alt="MoneyPlant"/>
+        </div>
+
+    </div>
+    <br />
+    <button type="button" class="btn btn-success">
+        Buy now!
+    </button>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-end pagination-sm">
+            <li class="page-item">
+                <a class="page-link" href="Jade_Plant.html">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="index.html">Home</a></li>
+            <li class="page-item"><a class="page-link" href="Lucky_Bamboo.html">1</a></li>
+            <li class="page-item"><a class="page-link" href="Jade_Plant.html">2</a></li>
+            <li class="page-item active">
+                <span class="page-link">
+                  3
+                <span class="sr-only">(current)</span>
+                </span>
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Next</a>
+            </li>
+        </ul>
+        </nav>
+
+    <p>
+        Coded by <strong>I</strong>oana
+    </p>
+    </div>
+    <script>
+        let buyButton = document.querySelector("button");
+        function buy(){
+            let currency = prompt("What currency do you use?(USD or EUR)");
+            currency = currency.toLowerCase().trim();
+            if (currency === "usd")
+                { alert ("You have to pay 100💲!")}
+            else {
+                if (currency === "eur") {
+                    alert ("You have to pay 100 € !")
+                }
+            else{
+                alert ("Use recommended currency!")
+                }
+            }
+        }
+    buyButton.addEventListener("click", buy);
+    </script>
+    </body>
+</html>
