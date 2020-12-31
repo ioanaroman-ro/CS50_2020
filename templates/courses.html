@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Courses
+{% endblock %}
+
+{% block main %}
+    <form action="/courses" method="post">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID Course</th>
+                    <th>Course Name</th>
+                    <th>Course Period</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for course in courses %}
+                    <tr>
+                        <td>{{ course["IDCourse"] }}</td>
+                        <td>{{ course["CourseName"] }}</td>
+                        <td>{{ course["CoursePeriod"] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <ul class="navbar-nav mr-auto mt-2">
+            <li class="nav-item"><a class="nav-link" href="/addcourse">Add Course</a></li>
+        </ul>
+    </form>
+{% endblock %}

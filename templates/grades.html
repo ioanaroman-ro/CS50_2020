@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Grades
+{% endblock %}
+
+{% block main %}
+    <form action="/grades" method="post">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>IDStudent</th>
+                    <th>IDCourse</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for grade in grades %}
+                    <tr>
+                        <td>{{ grade["IDStudent"] }}</td>
+                        <td>{{ grade["IDCourse"] }}</td>
+                        <td>{{ grade["Grade"] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <div>
+            <ul class="navbar-nav mr-auto mt-2">
+                <li class="nav-item"><a class="nav-link" href="/addgrade">Add Grade</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul class="navbar-nav mr-auto mt-2">
+                <li class="nav-item"><a class="nav-link" href="/updategrade">Update Grade</a></li>
+            </ul>
+        </div>
+    </form>
+{% endblock %}

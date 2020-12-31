@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Students
+{% endblock %}
+
+{% block main %}
+    <form action="/addstudent" method="post">
+        </table>
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" name="FirstName" placeholder="FirstName" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" name="MiddleName" placeholder="MiddleName" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" name="LastName" placeholder="LastName" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Add Student</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Update Grades
+{% endblock %}
+
+{% block main %}
+    <form action="/updategrade" method="post">
+        <div class="form-group">
+            <select class="form-control" name="IDStudent">
+                <option disabled selected value"">IDStudent</option>
+                {% for student in student_list %}
+                <option value="{{ student }}">{{ student }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <select class="form-control" name="IDCourse">
+                <option disabled selected value"">IDCourse</option>
+                {% for course in course_list %}
+                <option value="{{ course }}">{{ course }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" name="Grade" placeholder="Grade" type="number" min="1" max="10">
+        </div>
+        <button class="btn btn-primary" type="submit">Update Grade</button>
+    </form>
+{% endblock %}

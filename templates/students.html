@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Students
+{% endblock %}
+
+{% block main %}
+    <form action="/students" method="post">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID Student</th>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
+                    <th>Last Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for student in students %}
+                    <tr>
+                        <td>{{ student["IDStudent"] }}</td>
+                        <td>{{ student["FirstName"] }}</td>
+                        <td>{{ student["MiddleName"] }}</td>
+                        <td>{{ student["LastName"] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <ul class="navbar-nav mr-auto mt-2">
+            <li class="nav-item"><a class="nav-link" href="/addstudent">Add Student</a></li>
+        </ul>
+    </form>
+{% endblock %}
