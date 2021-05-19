@@ -9,6 +9,7 @@ The project is a web app via which teachers can manage their students, their cou
 The SQL Database consists of 4 tables: Users, Students, Grades and Courses.
 
 The file application.py
+
 There are a several routes:
 
 -route("/") index page, the first page any user sees, from where a user can login/register to acces the app, and, if logged in, he sees how many students he has and how many courses
